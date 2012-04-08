@@ -1,0 +1,13 @@
+# jersey-service
+
+zookeeper service (clj-zoo based) implementation in a jersey based serlet with clojure
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2012 pgdad
+
+Distributed under the Eclipse Public License, the same as Clojure.
