@@ -2,13 +2,14 @@
   (:import (jerseyzoo.JerseyZooServletContainer))
   (:require [jerseyzoo.JerseyZooServletContainer :as Container])
   (:require [clj-zoo.serverSession :as ssession])
+  (:import (javax.ws.rs GET Path Produces))
   (:gen-class :extends jerseyzoo.JerseyZooServletContainer
               ;; packages keepers env app region service major minor micro url
               :constructors {[String String String String String String
                               String String String String] [String String]}
               :state state
               :init init-state
-              :post post-init)
+              :post-init post)
   )
 
 (defn -init-state
@@ -16,7 +17,7 @@
   [[packages keepers] (ref {:env env :app app :region region :service service
                             :major major :minor minor :micro micro :url url})])
 
-(defn -post-init
+(defn -post
   [this packages keepers env app region service major minor micro url]
   (println "IN POST")
   (dosync
