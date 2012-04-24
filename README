@@ -4,7 +4,7 @@ zookeeper service (clj-zoo based) implementation in a jersey based serlet with c
 
 ## Usage
 
-FIXME: write
+Use this as a base class to build services on.
 
 ## License
 
